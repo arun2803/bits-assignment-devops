@@ -5,9 +5,7 @@ def mongodb_connect():
     try:
         client = MongoClient('mongodb://stack:0F1fr@1.1.1.1/default_db?authSource=st2')
         return client
-    except Exception as e:
-        print e
-
+# Removed Exception handling from this function
 
 def get_username_from_mongodb(token_id):
     try:
@@ -16,7 +14,6 @@ def get_username_from_mongodb(token_id):
         token_d_b = db.token_d_b
         data = token_d_b.find_one({"token": token_id})
         return data["user"]
+# Removed Exception handling from this function
 
 
-    except Exception as e:
-        print e
