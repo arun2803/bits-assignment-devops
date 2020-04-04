@@ -25,3 +25,5 @@ def get_ldapgroup_from_mysqldb(pack_name):
 
     except Exception as e:
         print e
+        
+        
